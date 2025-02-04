@@ -2,16 +2,16 @@ function loadDataset(month) {
     let filename = '';
     switch (month) {
         case 1:
-            filename = 'datasets/jan.csv';
+            filename = 'jan.csv';
             break;
         case 2:
-            filename = 'datasets/feb.csv';
+            filename = 'feb.csv';
             break;
         case 3:
-            filename = 'datasets/mar.csv';
+            filename = 'mar.csv';
             break;
         case 4:
-            filename = 'datasets/apr.csv';
+            filename = 'apr.csv';
             break;
         default:
             console.error('Invalid month selection');
@@ -56,30 +56,7 @@ function loadDataset(month) {
             link.setAttribute("href", encodedUri);
             link.setAttribute("download", `anomalies_${filename.split("/")[1]}`);
             link.innerHTML = "Download Anomalies CSV";
-            link.style.display = "block";
-            link.style.marginTop = "10px";
-            link.style.textDecoration = "none";
-            link.style.padding = "10px";
-            link.style.backgroundColor = "#28a745";
-            link.style.color = "white";
-            link.style.borderRadius = "5px";
             document.body.appendChild(link);
         })
         .catch(error => console.error("Error loading dataset:", error));
 }
-
-// Add some styling to the table
-document.addEventListener("DOMContentLoaded", () => {
-    document.getElementById("spikeTable").style.width = "80%";
-    document.getElementById("spikeTable").style.margin = "20px auto";
-    document.getElementById("spikeTable").style.borderCollapse = "collapse";
-    document.querySelectorAll("#spikeTable th, #spikeTable td").forEach(cell => {
-        cell.style.border = "1px solid #ddd";
-        cell.style.padding = "10px";
-        cell.style.textAlign = "center";
-    });
-    document.querySelectorAll("#spikeTable th").forEach(header => {
-        header.style.backgroundColor = "#007bff";
-        header.style.color = "white";
-    });
-});
