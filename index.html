@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Energy Usage Anomaly Detector</title>
+</head>
+<body>
+    <h1>Energy Usage Anomaly Detector</h1>
+    
+    <h2>Select a Month</h2>
+    <ul>
+        <li><a href="#" onclick="loadDataset('jan.csv')">January</a></li>
+        <li><a href="#" onclick="loadDataset('feb.csv')">February</a></li>
+        <li><a href="#" onclick="loadDataset('mar.csv')">March</a></li>
+        <li><a href="#" onclick="loadDataset('apr.csv')">April</a></li>
+    </ul>
+
+    <h2>Detected Anomalies</h2>
+    <table border="1" id="spikeTable">
+        <tr>
+            <th>Day</th>
+            <th>Room ID</th>
+            <th>Time Interval</th>
+            <th>Energy Usage</th>
+        </tr>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
