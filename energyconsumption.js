@@ -20,7 +20,7 @@ style.innerHTML = `
     #graph-image, #table-image {
         margin-top: 20px;
         width: 80%;
-        max-width: 800px;
+        max-width: 1000px;
         border-radius: 10px;
         box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
     }
