@@ -37,7 +37,7 @@ function loadDataset(month) {
             // Process dataset (skip header row)
             for (let i = 1; i < rows.length; i++) {
                 let [day, room_id, time_interval, usage] = rows[i];
-                if (parseFloat(usage) > 80) {  // Assuming above 80 is a spike
+                if (parseFloat(usage) > 95) {  // Assuming above 80 is a spike
                     let tr = document.createElement("tr");
                     tr.innerHTML = `<td>${day}</td>
                                     <td>${room_id}</td>
